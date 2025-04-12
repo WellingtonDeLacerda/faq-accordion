@@ -1,0 +1,119 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face  {
+    font-family: 'italic';
+    src: url('assets/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+}
+@font-face  {
+    font-family: 'variable';
+    src: url('assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+@font-face  {
+    font-family: 'semiBold';
+    src: url('assets/fonts/static/WorkSans-SemiBold.ttf');
+}
+@font-face  {
+    font-family: 'bold';
+    src: url('assets/fonts/static/WorkSans-Bold.ttf');
+}
+@font-face  {
+    font-family: 'regular';
+    src: url('assets/fonts/static/WorkSans-Regular.ttf');
+}
+
+:root{
+    /* ## Colors */
+
+    --White: hsl(0, 100%, 100%);
+    --Purple100: hsl(275, 100%, 97%);
+    --Purple600: hsl(292, 16%, 49%);
+    --Purple950: hsl(292, 42%, 14%);
+    
+    /* ## Fonts */
+    
+    --fonte1: 'variable'; /*  'variable' */
+    --fonte2: 'semiBold'; /*  'semiBold' */
+    --fonte3: 'bold'    ; /*  'bold' */
+    --fonte4: 'regular' ; /*  'regular' */
+    --fonte5:  italic   ; /*  'italic' */
+}
+html{
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--Purple100);
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: url("assets/images/background-pattern-mobile.svg") no-repeat center top fixed;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    background: white;
+    width: 350px;
+    min-height: 450px;
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #00000038;
+    
+}
+main h1{
+    font-family: var(--fonte1);
+    color: var(--Purple950);
+}
+main h3{
+    font-family: var(--fonte3);
+    color: var(--Purple950);
+}
+main p{
+    margin-bottom: 25px;
+    color: var(--Purple600);
+    line-height: 20px;
+    font-family: var(--fonte4);
+}
+main div#star_title{
+    display: flex;
+    align-items: center;
+}
+div#star_title img#star{
+    width: 25px;
+    margin-right: 20px;
+}
+main div.icones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main div.icones h3{
+    margin: 25px 0px;
+    padding-right: 20px;
+}
+
+
+@media screen and (min-width:768px){
+    body{
+        background: url("assets/images/background-pattern-desktop.svg") no-repeat center top fixed;
+    }
+    main{
+        width:580px ;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    div#star_title{
+        margin-bottom: 20px;
+    }
+    div#star_title img#star{
+    width: 4ppx;
+    }
+    main h1{
+        font-size: 3em;
+    }
+}
